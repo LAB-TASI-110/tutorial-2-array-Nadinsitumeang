@@ -7,18 +7,12 @@ int main() {
     int min_val = INT_MAX;
     int max_val = INT_MIN;
 
-    printf("Masukkan jumlah baris data (n): ");
-    if (scanf("%d", &n) != 1 || n <= 0) {
-        printf("Input jumlah baris tidak valid. Harap masukkan bilangan bulat positif.\n");
-        return 1;
-    }
+    // Membaca jumlah baris data (n)
+    scanf("%d", &n);
 
-    printf("Masukkan %d bilangan bulat (rentang -100 sampai 100):\n", n);
+    // Membaca n bilangan bulat dan mencari nilai min/max
     for (int i = 0; i < n; i++) {
-        if (scanf("%d", &input_val) != 1) {
-            printf("Input tidak valid. Harap masukkan bilangan bulat.\n");
-            return 1;
-        }
+        scanf("%d", &input_val);
         
         if (input_val < min_val) {
             min_val = input_val;
@@ -28,7 +22,7 @@ int main() {
         }
     }
 
-    printf("\nOutput:\n");
+    // Output nilai terkecil dan terbesar
     printf("%d\n", min_val);
     printf("%d\n", max_val);
 
